@@ -40,22 +40,22 @@ $(function() {
   function addBadges(badges) {
     var $achievementBadges = $('#achievementbadges');
 
-    badges.forEach(function(badge) {
+    badges.forEach(function(achievement) {
 
-      if (badge.course_url === null) {
+      if (achievement.course_url === null) {
         var $badge = $('<div />', {
           'class' : 'course'
         }).appendTo($achievementBadges);
 
         $('<h3 />', {
-          text : badge.name
+          text : achievement.name
         }).appendTo($badge);
 
         $('<img />', {
-          src : badge.badge
+          src : achievement.badge
         }).appendTo($badge);
 
-        var badgeUrl = "https://www.codeschool.com/users/2687967/badges/" + badge.badge.split('/')[6];
+        var badgeUrl = "https://www.codeschool.com/users/2687967/badges/" + achievement.badge.split('/')[6];
         $('<a />', {
           'class' : 'btn btn-primary',
           target : '_blank',
