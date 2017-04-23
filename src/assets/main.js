@@ -55,11 +55,11 @@ $(function() {
           src : badge.badge
         }).appendTo($badge);
 
-        var mystr = "https://www.codeschool.com/users/2687967/badges/" + badge.badge.split('/')[6];
+        var badgeUrl = "https://www.codeschool.com/users/2687967/badges/" + badge.badge.split('/')[6];
         $('<a />', {
           'class' : 'btn btn-primary',
           target : '_blank',
-          href : mystr,
+          href : badgeUrl,
           text : 'See Badge'
         }).appendTo($badge);
       }
